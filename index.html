@@ -116,7 +116,55 @@
     <h1>✨ Welcome to VastraVibe ✨</h1>
 
     <!-- Gallery -->
-    <div class="gallery">
+    <div class="<!-- Slideshow -->
+<div class="slideshow-container">
+
+  <div class="mySlides fade">
+    <img src="images/photo1.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="images/photo2.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="images/photo3.jpg" style="width:100%">
+  </div>
+
+</div>
+
+<style>
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides {display: none;}
+
+.mySlides img {
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+</style>
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  slides[slideIndex-1].style.display = "block";  
+  setTimeout(showSlides, 3000); // Change image every 3 seconds
+}
+</script>
+>
         <img src="image.01.jpg" alt="Brand Photo 1">
         <img src="image.02.jpg" alt="Brand Photo 2">
         <img src="image.02.jpg" alt="Brand Photo 3">
@@ -146,4 +194,5 @@
 
 </body>
 </html>
+
 
